@@ -1,11 +1,12 @@
 class Casa{
 
  //propriedades   
-var cor: String = ""
+  var cor: String = ""
+  
 
 //metodos
-fun abrirJanela(){
-    println("Abrir Janela")
+fun abrirJanela(qtdJanelas: Int){
+    println("Abrir Janela total:  $qtdJanelas")
 }
 
 fun abrirPorta(){
@@ -14,7 +15,7 @@ fun abrirPorta(){
 
 fun abrirCasa(){   //"this" é usado para acessar atributo ou metosdos dentro da propria classe
     this.abrirPorta
-    this.abrirJanela
+    //this.abrirJanela
    
 }
 
@@ -28,7 +29,7 @@ fun main(args: Array<String>) {
 
     val casa = casa()
     casa.cor = "amarela"
-    casa.abrirCasa()
+    casa.abrirJanela(10)
 
     /* 
     val casa2 = casa()
